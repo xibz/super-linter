@@ -74,7 +74,7 @@ jobs:
       # Update deployment API #
       #########################
       - name: Start deployment
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v0.5.2
         id: deployment
         with:
           step: start
@@ -96,9 +96,7 @@ jobs:
           push: true
           tags: |
             github/super-linter:latest
-            github/super-linter:v3
             ghcr.io/github/super-linter:latest
-            ghcr.io/github/super-linter:v3
 
       #######################################################
       # Create a GitHub Issue with the info from this build #
@@ -149,7 +147,7 @@ jobs:
       # Update Deployment API #
       #########################
       - name: Update deployment status
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v0.5.2
         if: always()
         with:
           step: finish
