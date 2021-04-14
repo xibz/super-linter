@@ -728,6 +728,10 @@ trap 'cleanup' 0 1 2 3 6 14 15
 ##########
 Header
 
+echo "CHECK IF ANYTHING HAS CHANGED"
+git status
+git --no-pager diff
+
 ##############################################################
 # check flag for validating the report folder does not exist #
 ##############################################################
